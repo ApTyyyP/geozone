@@ -3,9 +3,13 @@ let map = L.map('map').setView([48.831770942, 37.937645504], 14);
 // let myGeoJSON = {"type": "FeatureCollection","name": "boundary","crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },"features": [{ "type": "Feature", "properties": { "id": 2 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 28.017106145119566, 50.827900830649995 ], [ 28.016236891419343, 50.830531024104218 ], [ 28.01643878260133, 50.831170346180514 ], [ 28.019158705469774, 50.831361021185728 ], [ 28.01987654078351, 50.827513872551179 ], [ 28.017106145119566, 50.827900830649995 ] ] ] ] } }]};
 // L.geoJSON(myGeoJSON).addTo(map);
 
-let osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+let osmLayer = new L.tileLayer(osmUrl, {
   attribution: '&copy; <a href="copyright">Openstreetmap</a>'
-}).addTo(map);
+});
+
+map.addLayer(osmLayer);
 
 let baseMaps = {
   'Карта': osmLayer,
@@ -18,566 +22,679 @@ let baseMaps = {
 
 let marker1 = L.marker([48.837995308, 37.916132744], {
   draggable: false,
+  animate: true,
   title: "marker_1",
 }).addTo(map).bindPopup('1420988400:01:063:0003').on('click', clickZoom);
 
 let marker2 = L.marker([48.838417055, 37.925196334], {
   draggable: false,
+  animate: true,
   title: "marker_2",
 }).addTo(map).bindPopup('1420988400:01:001:0005').on('click', clickZoom);
 
 let marker3 = L.marker([48.838963516, 37.930609147], {
   draggable: false,
+  animate: true,
   title: "marker_3",
 }).addTo(map).bindPopup('1420988400:01:005:0040').on('click', clickZoom);
 
 let marker4 = L.marker([48.836398926, 37.915855016], {
   draggable: false,
+  animate: true,
   title: "marker_4",
 }).addTo(map).bindPopup('1420988400:01:063:0005').on('click', clickZoom);
 
 let marker5 = L.marker([48.830403964, 37.926789827], {
   draggable: false,
+  animate: true,
   title: "marker_5",
 }).addTo(map).bindPopup('1420988400:01:001:0017').on('click', clickZoom);
 
 let marker6 = L.marker([48.827500233, 37.92736716], {
   draggable: false,
+  animate: true,
   title: "marker_6",
 }).addTo(map).bindPopup('1420988400:01:001:0021').on('click', clickZoom);
 
 let marker7 = L.marker([48.829677449, 37.926934273], {
   draggable: false,
+  animate: true,
   title: "marker_7",
 }).addTo(map).bindPopup('1420988400:01:001:0018').on('click', clickZoom);
 
 let marker8 = L.marker([48.831675951, 37.926536924], {
   draggable: false,
+  animate: true,
   title: "marker_8",
 }).addTo(map).bindPopup('1420988400:01:001:0015').on('click', clickZoom);
 
 let marker9 = L.marker([48.82621385, 37.918052482], {
   draggable: false,
+  animate: true,
   title: "marker_9",
 }).addTo(map).bindPopup('1420988400:01:063:0018').on('click', clickZoom);
 
 let marker10 = L.marker([48.833312754, 37.926211442], {
   draggable: false,
+  animate: true,
   title: "marker_10",
 }).addTo(map).bindPopup('1420988400:01:001:0012').on('click', clickZoom);
 
 let marker11 = L.marker([48.832487527, 37.916691384], {
   draggable: false,
+  animate: true,
   title: "marker_11",
 }).addTo(map).bindPopup('1420988400:01:063:0010').on('click', clickZoom);
 
 let marker12 = L.marker([48.831493426, 37.924163657], {
   draggable: false,
+  animate: true,
   title: "marker_12",
 }).addTo(map).bindPopup('1420988400:01:001:0025').on('click', clickZoom);
 
 let marker13 = L.marker([48.835635952, 37.916020149], {
   draggable: false,
+  animate: true,
   title: "marker_13",
 }).addTo(map).bindPopup('1420988400:01:063:0006').on('click', clickZoom);
 
 let marker14 = L.marker([48.834769682, 37.925921727], {
   draggable: false,
+  animate: true,
   title: "marker_14",
 }).addTo(map).bindPopup('1420988400:01:001:0010').on('click', clickZoom);
 
 let marker15 = L.marker([48.827006737, 37.917876268], {
   draggable: false,
+  animate: true,
   title: "marker_15",
 }).addTo(map).bindPopup('1420988400:01:063:0017').on('click', clickZoom);
 
 let marker16 = L.marker([48.828585945, 37.917525251], {
   draggable: false,
+  animate: true,
   title: "marker_16",
 }).addTo(map).bindPopup('1420988400:01:063:0015').on('click', clickZoom);
 
 let marker17 = L.marker([48.834041219, 37.926066598], {
   draggable: false,
+  animate: true,
   title: "marker_17",
 }).addTo(map).bindPopup('1420988400:01:001:0011').on('click', clickZoom);
 
 let marker18 = L.marker([48.833258624, 37.916527443], {
   draggable: false,
+  animate: true,
   title: "marker_18",
 }).addTo(map).bindPopup('1420988400:01:063:0009').on('click', clickZoom);
 
 let marker19 = L.marker([48.830156331, 37.917186876], {
   draggable: false,
+  animate: true,
   title: "marker_19",
 }).addTo(map).bindPopup('1420988400:01:063:0013').on('click', clickZoom);
 
 let marker20 = L.marker([48.828225582, 37.927222937], {
   draggable: false,
+  animate: true,
   title: "marker_20",
 }).addTo(map).bindPopup('1420988400:01:001:0020').on('click', clickZoom);
 
 let marker21 = L.marker([48.831130675, 37.926645346], {
   draggable: false,
+  animate: true,
   title: "marker_21",
 }).addTo(map).bindPopup('1420988400:01:001:0016').on('click', clickZoom);
 
 let marker22 = L.marker([48.832039598, 37.926464593], {
   draggable: false,
+  animate: true,
   title: "marker_22",
 }).addTo(map).bindPopup('1420988400:01:001:0014').on('click', clickZoom);
 
 let marker23 = L.marker([48.830936641, 37.917021032], {
   draggable: false,
+  animate: true,
   title: "marker_23",
 }).addTo(map).bindPopup('1420988400:01:063:0012').on('click', clickZoom);
 
 let marker24 = L.marker([48.83715429, 37.915698555], {
   draggable: false,
+  animate: true,
   title: "marker_24",
 }).addTo(map).bindPopup('1420988400:01:063:0004').on('click', clickZoom);
 
 let marker25 = L.marker([48.827797526, 37.917700496], {
   draggable: false,
+  animate: true,
   title: "marker_25",
 }).addTo(map).bindPopup('1420988400:01:063:0016').on('click', clickZoom);
 
 let marker26 = L.marker([48.829372336, 37.917353571], {
   draggable: false,
+  animate: true,
   title: "marker_26",
 }).addTo(map).bindPopup('1420988400:01:063:0014').on('click', clickZoom);
 
 let marker27 = L.marker([48.831713793, 37.916855826], {
   draggable: false,
+  animate: true,
   title: "marker_27",
 }).addTo(map).bindPopup('1420988400:01:063:0011').on('click', clickZoom);
 
 let marker28 = L.marker([48.834849797, 37.916189184], {
   draggable: false,
+  animate: true,
   title: "marker_28",
 }).addTo(map).bindPopup('1420988400:01:063:0007').on('click', clickZoom);
 
 let marker29 = L.marker([48.834046067, 37.916360072], {
   draggable: false,
+  animate: true,
   title: "marker_29",
 }).addTo(map).bindPopup('1420988400:01:063:0008').on('click', clickZoom);
 
 let marker30 = L.marker([48.829482012, 37.938125858], {
   draggable: false,
+  animate: true,
   title: "marker_30",
 }).addTo(map).bindPopup('1420988400:01:005:0021').on('click', clickZoom);
 
 let marker31 = L.marker([48.835157064, 37.936934797], {
   draggable: false,
+  animate: true,
   title: "marker_31",
 }).addTo(map).bindPopup('1420988400:01:005:0010').on('click', clickZoom);
 
 let marker32 = L.marker([48.839437956, 37.947956287], {
   draggable: false,
+  animate: true,
   title: "marker_32",
 }).addTo(map).bindPopup('1420988400:01:009:0004').on('click', clickZoom);
 
 let marker33 = L.marker([48.838676143, 37.948120825], {
   draggable: false,
+  animate: true,
   title: "marker_33",
 }).addTo(map).bindPopup('1420988400:01:009:0005').on('click', clickZoom);
 
 let marker34 = L.marker([48.837932711, 37.948281428], {
   draggable: false,
+  animate: true,
   title: "marker_34",
 }).addTo(map).bindPopup('1420988400:01:009:0006').on('click', clickZoom);
 
 let marker35 = L.marker([48.836608614, 37.948567361], {
   draggable: false,
+  animate: true,
   title: "marker_35",
 }).addTo(map).bindPopup('1420988400:01:009:0008').on('click', clickZoom);
 
 let marker36 = L.marker([48.829767579, 37.950044674], {
   draggable: false,
+  animate: true,
   title: "marker_36",
 }).addTo(map).bindPopup('1420988400:01:009:0020').on('click', clickZoom);
 
 let marker37 = L.marker([48.823775945, 37.928106585], {
   draggable: false,
+  animate: true,
   title: "marker_37",
 }).addTo(map).bindPopup('1420988400:01:003:0003').on('click', clickZoom);
 
 let marker38 = L.marker([48.838138116, 37.936386854], {
   draggable: false,
+  animate: true,
   title: "marker_38",
 }).addTo(map).bindPopup('1420988400:01:005:0005').on('click', clickZoom);
 
 let marker39 = L.marker([48.831638229, 37.949640761], {
   draggable: false,
+  animate: true,
   title: "marker_39",
 }).addTo(map).bindPopup('1420988400:01:009:0017').on('click', clickZoom);
 
 let marker40 = L.marker([48.831039202, 37.937799084], {
   draggable: false,
+  animate: true,
   title: "marker_40",
 }).addTo(map).bindPopup('1420988400:01:005:0018').on('click', clickZoom);
 
 let marker41 = L.marker([48.826775271, 37.927511276], {
   draggable: false,
+  animate: true,
   title: "marker_41",
 }).addTo(map).bindPopup('1420988400:01:001:0022').on('click', clickZoom);
 
 let marker42 = L.marker([48.834748313, 37.948969142], {
   draggable: false,
+  animate: true,
   title: "marker_42",
 }).addTo(map).bindPopup('1420988400:01:009:0011').on('click', clickZoom);
 
 let marker43 = L.marker([48.837244042, 37.948430158], {
   draggable: false,
+  animate: true,
   title: "marker_43",
 }).addTo(map).bindPopup('1420988400:01:009:0007').on('click', clickZoom);
 
 let marker44 = L.marker([48.830532376, 37.93174667], {
   draggable: false,
+  animate: true,
   title: "marker_44",
 }).addTo(map).bindPopup('1420988400:01:005:0041').on('click', clickZoom);
 
 let marker45 = L.marker([48.829735802, 37.921963196], {
   draggable: false,
+  animate: true,
   title: "marker_45",
 }).addTo(map).bindPopup('1420988400:01:003:0011').on('click', clickZoom);
 
 let marker46 = L.marker([48.832555941, 37.943606439], {
   draggable: false,
+  animate: true,
   title: "marker_46",
 }).addTo(map).bindPopup('1420988400:01:009:0027').on('click', clickZoom);
 
 let marker47 = L.marker([48.833505431, 37.949237535], {
   draggable: false,
+  animate: true,
   title: "marker_47",
 }).addTo(map).bindPopup('1420988400:01:009:0013').on('click', clickZoom);
 
 let marker48 = L.marker([48.831858571, 37.928910077], {
   draggable: false,
+  animate: true,
   title: "marker_48",
 }).addTo(map).bindPopup('1420988400:01:001:0026').on('click', clickZoom);
 
 let marker49 = L.marker([48.820989354, 37.928671555], {
   draggable: false,
+  animate: true,
   title: "marker_49",
 }).addTo(map).bindPopup('1420988400:01:003:0007').on('click', clickZoom);
 
 let marker50 = L.marker([48.827250782, 37.950588053], {
   draggable: false,
+  animate: true,
   title: "marker_50",
 }).addTo(map).bindPopup('1420988400:01:009:0024').on('click', clickZoom);
 
 let marker51 = L.marker([48.833975553, 37.937182821], {
   draggable: false,
+  animate: true,
   title: "marker_51",
 }).addTo(map).bindPopup('1420988400:01:005:0012').on('click', clickZoom);
 
 let marker52 = L.marker([48.821002285, 37.939777263], {
   draggable: false,
+  animate: true,
   title: "marker_52",
 }).addTo(map).bindPopup('1420988400:01:005:0038').on('click', clickZoom);
 
 let marker53 = L.marker([48.83279833, 37.937429906], {
   draggable: false,
+  animate: true,
   title: "marker_53",
 }).addTo(map).bindPopup('1420988400:01:005:0014').on('click', clickZoom);
 
 let marker54 = L.marker([48.837686843, 37.925341581], {
   draggable: false,
+  animate: true,
   title: "marker_54",
 }).addTo(map).bindPopup('1420988400:01:001:0006').on('click', clickZoom);
 
 let marker55 = L.marker([48.837531895, 37.93643634], {
   draggable: false,
+  animate: true,
   title: "marker_55",
 }).addTo(map).bindPopup('1420988400:01:005:0006').on('click', clickZoom);
 
 let marker56 = L.marker([48.828125576, 37.938406536], {
   draggable: false,
+  animate: true,
   title: "marker_56",
 }).addTo(map).bindPopup('1420988400:01:005:0025').on('click', clickZoom);
 
 let marker57 = L.marker([48.832416709, 37.949472638], {
   draggable: false,
+  animate: true,
   title: "marker_57",
 }).addTo(map).bindPopup('1420988400:01:009:0015').on('click', clickZoom);
 
 let marker58 = L.marker([48.822310307, 37.939630625], {
   draggable: false,
+  animate: true,
   title: "marker_58",
 }).addTo(map).bindPopup('1420988400:01:005:0036').on('click', clickZoom);
 
 let marker59 = L.marker([48.821683309, 37.939762158], {
   draggable: false,
+  animate: true,
   title: "marker_59",
 }).addTo(map).bindPopup('1420988400:01:005:0037').on('click', clickZoom);
 
 let marker60 = L.marker([48.821666921, 37.928534205], {
   draggable: false,
+  animate: true,
   title: "marker_60",
 }).addTo(map).bindPopup('1420988400:01:003:0006').on('click', clickZoom);
 
 let marker61 = L.marker([48.823055079, 37.928252755], {
   draggable: false,
+  animate: true,
   title: "marker_61",
 }).addTo(map).bindPopup('1420988400:01:003:0004').on('click', clickZoom);
 
 let marker62 = L.marker([48.835368796, 37.948835136], {
   draggable: false,
+  animate: true,
   title: "marker_62",
 }).addTo(map).bindPopup('1420988400:01:009:0010').on('click', clickZoom);
 
 let marker63 = L.marker([48.827893288, 37.950449334], {
   draggable: false,
+  animate: true,
   title: "marker_63",
 }).addTo(map).bindPopup('1420988400:01:009:0023').on('click', clickZoom);
 
 let marker64 = L.marker([48.824621755, 37.918406324], {
   draggable: false,
+  animate: true,
   title: "marker_64",
 }).addTo(map).bindPopup('1420988400:01:063:0020').on('click', clickZoom);
 
 let marker65 = L.marker([48.823822816, 37.918583865], {
   draggable: false,
+  animate: true,
   title: "marker_65",
 }).addTo(map).bindPopup('1420988400:01:063:0021').on('click', clickZoom);
 
 let marker66 = L.marker([48.825315526, 37.927675638], {
   draggable: false,
+  animate: true,
   title: "marker_66",
 }).addTo(map).bindPopup('1420988400:01:001:0024').on('click', clickZoom);
 
 let marker67 = L.marker([48.832105317, 37.949539882], {
   draggable: false,
+  animate: true,
   title: "marker_67",
 }).addTo(map).bindPopup('1420988400:01:009:0016').on('click', clickZoom);
 
 let marker68 = L.marker([48.822352589, 37.928395177], {
   draggable: false,
+  animate: true,
   title: "marker_68",
 }).addTo(map).bindPopup('1420988400:01:003:0005').on('click', clickZoom);
 
 let marker69 = L.marker([48.829143263, 37.950179426], {
   draggable: false,
+  animate: true,
   title: "marker_69",
 }).addTo(map).bindPopup('1420988400:01:009:0021').on('click', clickZoom);
 
 let marker70 = L.marker([48.828518565, 37.950314338], {
   draggable: false,
+  animate: true,
   title: "marker_70",
 }).addTo(map).bindPopup('1420988400:01:009:0022').on('click', clickZoom);
 
 let marker71 = L.marker([48.830454351, 37.937921836], {
   draggable: false,
+  animate: true,
   title: "marker_71",
 }).addTo(map).bindPopup('1420988400:01:005:0019').on('click', clickZoom);
 
 let marker72 = L.marker([48.828706752, 37.938288572], {
   draggable: false,
+  animate: true,
   title: "marker_72",
 }).addTo(map).bindPopup('1420988400:01:005:0024').on('click', clickZoom);
 
 let marker73 = L.marker([48.82349667, 37.939381749], {
   draggable: false,
+  animate: true,
   title: "marker_73",
 }).addTo(map).bindPopup('1420988400:01:005:0034').on('click', clickZoom);
 
 let marker74 = L.marker([48.832210791, 37.937553193], {
   draggable: false,
+  animate: true,
   title: "marker_74",
 }).addTo(map).bindPopup('1420988400:01:005:0015').on('click', clickZoom);
 
 let marker75 = L.marker([48.826389319, 37.938774861], {
   draggable: false,
+  animate: true,
   title: "marker_75",
 }).addTo(map).bindPopup('1420988400:01:005:0028').on('click', clickZoom);
 
 let marker76 = L.marker([48.831478248, 37.937706985], {
   draggable: false,
+  animate: true,
   title: "marker_76",
 }).addTo(map).bindPopup('1420988400:01:005:0017').on('click', clickZoom);
 
 let marker77 = L.marker([48.82653369, 37.950198097], {
   draggable: false,
+  animate: true,
   title: "marker_77",
 }).addTo(map).bindPopup('1420988400:01:009:0025').on('click', clickZoom);
 
 let marker78 = L.marker([48.830391513, 37.949909967], {
   draggable: false,
+  animate: true,
   title: "marker_78",
 }).addTo(map).bindPopup('1420988400:01:009:0019').on('click', clickZoom);
 
 let marker79 = L.marker([48.835749164, 37.936810559], {
   draggable: false,
+  animate: true,
   title: "marker_79",
 }).addTo(map).bindPopup('1420988400:01:005:0009').on('click', clickZoom);
 
 let marker80 = L.marker([48.836957015, 37.925486724], {
   draggable: false,
+  animate: true,
   title: "marker_80",
 }).addTo(map).bindPopup('1420988400:01:001:0007').on('click', clickZoom);
 
 let marker81 = L.marker([48.836936847, 37.936561229], {
   draggable: false,
+  animate: true,
   title: "marker_81",
 }).addTo(map).bindPopup('1420988400:01:005:0007').on('click', clickZoom);
 
 let marker82 = L.marker([48.832585071, 37.92635616], {
   draggable: false,
+  animate: true,
   title: "marker_82",
 }).addTo(map).bindPopup('1420988400:01:001:0013').on('click', clickZoom);
 
 let marker83 = L.marker([48.825418593, 37.918229218], {
   draggable: false,
+  animate: true,
   title: "marker_83",
 }).addTo(map).bindPopup('1420988400:01:063:0019').on('click', clickZoom);
 
 let marker84 = L.marker([48.827546154, 37.938532076], {
   draggable: false,
+  animate: true,
   title: "marker_84",
 }).addTo(map).bindPopup('1420988400:01:005:0026').on('click', clickZoom);
 
 let marker85 = L.marker([48.835988707, 37.948701282], {
   draggable: false,
+  animate: true,
   title: "marker_85",
 }).addTo(map).bindPopup('1420988400:01:009:0009').on('click', clickZoom);
 
 let marker86 = L.marker([48.836227387, 37.925631842], {
   draggable: false,
+  animate: true,
   title: "marker_86",
 }).addTo(map).bindPopup('1420988400:01:001:0008').on('click', clickZoom);
 
 let marker87 = L.marker([48.824503494, 37.927959067], {
   draggable: false,
+  animate: true,
   title: "marker_87",
 }).addTo(map).bindPopup('1420988400:01:003:0002').on('click', clickZoom);
 
 let marker88 = L.marker([48.826050312, 37.927655382], {
   draggable: false,
+  animate: true,
   title: "marker_88",
 }).addTo(map).bindPopup('1420988400:01:001:0023').on('click', clickZoom);
 
 let marker89 = L.marker([48.82523623, 37.939016785], {
   draggable: false,
+  animate: true,
   title: "marker_89",
 }).addTo(map).bindPopup('1420988400:01:005:0031').on('click', clickZoom);
 
 let marker90 = L.marker([48.824660491, 37.939137559], {
   draggable: false,
+  animate: true,
   title: "marker_90",
 }).addTo(map).bindPopup('1420988400:01:005:0032').on('click', clickZoom);
 
 let marker91 = L.marker([48.823020986, 37.91876207], {
   draggable: false,
+  animate: true,
   title: "marker_91",
 }).addTo(map).bindPopup('1420988400:01:063:0022').on('click', clickZoom);
 
 let marker92 = L.marker([48.829288089, 37.938166634], {
   draggable: false,
+  animate: true,
   title: "marker_92",
 }).addTo(map).bindPopup('1420988400:01:005:0022').on('click', clickZoom);
 
 let marker93 = L.marker([48.832883414, 37.949371854], {
   draggable: false,
+  animate: true,
   title: "marker_93",
 }).addTo(map).bindPopup('1420988400:01:009:0014').on('click', clickZoom);
 
 let marker94 = L.marker([48.839602643, 37.936271673], {
   draggable: false,
+  animate: true,
   title: "marker_94",
 }).addTo(map).bindPopup('1420988400:01:005:0003').on('click', clickZoom);
 
 let marker95 = L.marker([48.825668163, 37.938926109], {
   draggable: false,
+  animate: true,
   title: "marker_95",
 }).addTo(map).bindPopup('1420988400:01:005:0030').on('click', clickZoom);
 
 let marker96 = L.marker([48.826967471, 37.938653533], {
   draggable: false,
+  animate: true,
   title: "marker_96",
 }).addTo(map).bindPopup('1420988400:01:005:0027').on('click', clickZoom);
 
 let marker97 = L.marker([48.828951323, 37.927078655], {
   draggable: false,
+  animate: true,
   title: "marker_97",
 }).addTo(map).bindPopup('1420988400:01:001:0019').on('click', clickZoom);
 
 let marker98 = L.marker([48.834566043, 37.937058897], {
   draggable: false,
+  animate: true,
   title: "marker_98",
 }).addTo(map).bindPopup('1420988400:01:005:0011').on('click', clickZoom);
 
 let marker99 = L.marker([48.82152878, 37.919093639], {
   draggable: false,
+  animate: true,
   title: "marker_99",
 }).addTo(map).bindPopup('1420988400:01:063:0024').on('click', clickZoom);
 
 let marker100 = L.marker([48.82080689, 37.919254064], {
   draggable: false,
+  animate: true,
   title: "marker_100",
 }).addTo(map).bindPopup('1420988400:01:063:0025').on('click', clickZoom);
 
 let marker101 = L.marker([48.833386406, 37.937306475], {
   draggable: false,
+  animate: true,
   title: "marker_101",
 }).addTo(map).bindPopup('1420988400:01:005:0013').on('click', clickZoom);
 
 let marker102 = L.marker([48.831015061, 37.949775306], {
   draggable: false,
+  animate: true,
   title: "marker_102",
 }).addTo(map).bindPopup('1420988400:01:009:0018').on('click', clickZoom);
 
 let marker103 = L.marker([48.838838554, 37.936469665], {
   draggable: false,
+  animate: true,
   title: "marker_103",
 }).addTo(map).bindPopup('1420988400:01:005:0004').on('click', clickZoom);
 
 let marker104 = L.marker([48.829094259, 37.938207119], {
   draggable: false,
+  animate: true,
   title: "marker_104",
 }).addTo(map).bindPopup('1420988400:01:005:0023').on('click', clickZoom);
 
 let marker105 = L.marker([48.834127066, 37.949103325], {
   draggable: false,
+  animate: true,
   title: "marker_105",
 }).addTo(map).bindPopup('1420988400:01:009:0012').on('click', clickZoom);
 
 let marker106 = L.marker([48.836342604, 37.936685969], {
   draggable: false,
+  animate: true,
   title: "marker_106",
 }).addTo(map).bindPopup('1420988400:01:005:0008').on('click', clickZoom);
 
 let marker107 = L.marker([48.825956307, 37.938865718], {
   draggable: false,
+  animate: true,
   title: "marker_107",
 }).addTo(map).bindPopup('1420988400:01:005:0029').on('click', clickZoom);
 
 let marker108 = L.marker([48.822254358, 37.918932423], {
   draggable: false,
+  animate: true,
   title: "marker_108",
 }).addTo(map).bindPopup('1420988400:01:063:0023').on('click', clickZoom);
 
 let marker109 = L.marker([48.822907516, 37.939505364], {
   draggable: false,
+  animate: true,
   title: "marker_109",
 }).addTo(map).bindPopup('1420988400:01:005:0035').on('click', clickZoom);
 
 let marker110 = L.marker([48.824081533, 37.939259033], {
   draggable: false,
+  animate: true,
   title: "marker_110",
 }).addTo(map).bindPopup('1420988400:01:005:0033').on('click', clickZoom);
 
 let marker111 = L.marker([48.829870563, 37.938044344], {
   draggable: false,
+  animate: true,
   title: "marker_111",
 }).addTo(map).bindPopup('1420988400:01:005:0020').on('click', clickZoom);
 
 let marker112 = L.marker([48.835498147, 37.925776864], {
   draggable: false,
+  animate: true,
   title: "marker_112",
 }).addTo(map).bindPopup('1420988400:01:001:0009').on('click', clickZoom);
 
 let marker113 = L.marker([48.831770942, 37.937645504], {
   draggable: false,
+  animate: true,
   title: "marker_113",
 }).addTo(map).bindPopup('1420988400:01:005:0016').on('click', clickZoom);
 
@@ -706,7 +823,7 @@ function markerFunction(id) {
     let markerID = markers[i].options.title;
     let position = markers[i].getLatLng();
     if (markerID === id) {
-      map.setView(position, 15);
+      map.setView(position, 16);
       markers[i].openPopup();
     }
   }

@@ -4,6 +4,11 @@ html, body {
 
 .list {
     height: 100vh;
+    overflow: auto;
+}
+
+.list a:hover {
+    box-shadow: 0 0 10px 100px #e2e3e5 inset;
 }
 
 #map {
