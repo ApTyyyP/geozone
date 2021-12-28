@@ -1,0 +1,21 @@
+html, body {
+    height: 100vh;
+}
+
+.custom-select-lg option:hover {
+    box-shadow: 0 0 10px 100px #e2e3e5 inset;
+}
+
+#map {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.leaflet-control-layers-toggle {
+    background-image: url(images/layers.svg);
+    background-size: 30px 30px;
+    width: 38px;
+    height: 38px;
+}
