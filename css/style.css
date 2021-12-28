@@ -2,8 +2,8 @@ html, body {
     height: 100vh;
 }
 
-.custom-select-lg option:hover {
-    box-shadow: 0 0 10px 100px #e2e3e5 inset;
+.list {
+    height: 100vh;
 }
 
 #map {
